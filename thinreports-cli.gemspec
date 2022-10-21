@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
   spec.extra_rdoc_files = ['README.md']
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'thinreports', '~> 0.9.0'
+  spec.add_dependency 'thinreports', '>= 0.9.0'
   spec.add_dependency 'thor', '>= 0.19.0'
 
   spec.add_development_dependency 'bundler', '>= 1.0.0'
