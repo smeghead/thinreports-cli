@@ -1,4 +1,5 @@
 require 'json'
+require 'thinreports'
 
 module Thinreports
   module Cli

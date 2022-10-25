@@ -1,0 +1,16 @@
+{
+  "pages": [
+    {
+      "template": "test/data/generate/page1.tlf",
+      "items": {
+        "text": {"value": "山田 太郎"}
+      }
+    },
+    {
+      "template": "test/data/generate/page2.tlf",
+      "items": {
+        "text": {"value": "静岡県"}
+      }
+    }
+  ]
+}
