@@ -18,6 +18,34 @@ Upgrade .tlf schema to 0.9.x from 0.8.x:
 $ thinreports upgrade /path/to/old-0.8.x.tlf /path/to/new-0.9.x.tlf
 ```
 
+### $ thinreports generate
+
+Generate PDF.
+
+```
+$ thinreports generate /path/to/parameter.json /path/to/output.pdf
+```
+
+* parameter.json sample
+```json
+{
+  "pages": [
+    {
+      "template": "example/page1.tlf",
+      "items": {
+        "text": {"value": "山田 太郎"}
+      }
+    },
+    {
+      "template": "example/page2.tlf",
+      "items": {
+        "text": {"value": "静岡県"}
+      }
+    }
+  ]
+}
+```
+
 ## Requirements
 
  - Ruby 2.0.0+
