@@ -6,8 +6,8 @@ module Thinreports
     module Commands
       class Generate
 
-        def initialize(source_path, destination_path)
-          @source_path = source_path
+        def initialize(parameter_path, destination_path)
+          @parameter_path = parameter_path
           @destination_path = destination_path
         end
 
@@ -33,11 +33,11 @@ module Thinreports
 
         private
 
-        attr_reader :source_path, :destination_path
+        attr_reader :parameter_path, :destination_path
 
         def load_parameter
-          error "No such file - #{source_path}" unless File.exist?(source_path)
-          JSON.parse(File.read(source_path, encoding: 'UTF-8'))
+          error "No such file - #{parameter_path}" unless File.exist?(parameter_path)
+          JSON.parse(File.read(parameter_path, encoding: 'UTF-8'))
         end
 
         def error(message)
