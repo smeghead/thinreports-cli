@@ -34,4 +34,19 @@ class GenerateTest < Minitest::Test
     assert_equal '%PDF-', File.read(outputPdf)[0..4], '4 bytes of file head.'
     File.delete(outputPdf)
   end
+  def test_generation_item_not_exists
+    parameterJson = TEST_ROOT.join('data/generate/parameter_not_exists_item_key.json').to_s()
+    outputPdf = TEST_ROOT.join('data/generate/output.pdf').to_s()
+    generate = Thinreports::Cli::Commands::Generate.new(parameterJson, outputPdf)
+    err_outtput = <<~EOS
+      WARNING: No such item. This item will ignored. (page: 1, key: `not_exists`)
+      WARNING: No such item. This item will ignored. (page: 2, key: `not_exists`)
+    EOS
+    assert_output('', err_outtput) do
+      generate.call
+    end
+    assert_equal '%PDF-', File.read(outputPdf)[0..4], '4 bytes of file head.'
+    File.delete(outputPdf)
+  end
+
 end

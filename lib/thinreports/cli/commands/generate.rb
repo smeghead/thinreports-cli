@@ -20,6 +20,10 @@ module Thinreports
           parameter['pages'].each do |page|
             report.start_new_page layout: page['template'] do |p|
               page['items'].each do |name, value|
+                if ! p.item_exists?(name.to_sym)
+                  $stderr.puts sprintf('WARNING: No such item. This item will ignored. (page: %d, key: `%s`)', p.no, name)
+                  next
+                end
                 p.item(name.to_sym).value(value['value'])
               end
             end

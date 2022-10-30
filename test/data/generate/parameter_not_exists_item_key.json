@@ -1,0 +1,18 @@
+{
+  "pages": [
+    {
+      "template": "test/data/generate/page1.tlf",
+      "items": {
+        "text": {"value": "山田 太郎"},
+        "not_exists": {"value": "レイアウトファイルに存在しないキーで値が設定された"}
+      }
+    },
+    {
+      "template": "test/data/generate/page2.tlf",
+      "items": {
+        "text": {"value": "静岡県"},
+        "not_exists": {"value": "レイアウトファイルに存在しないキーで値が設定された"}
+      }
+    }
+  ]
+}
