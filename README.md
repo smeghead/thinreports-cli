@@ -1,6 +1,7 @@
 # Thinreports::CLI
 
 [![Gem Version](https://badge.fury.io/rb/thinreports-cli.svg)](https://badge.fury.io/rb/thinreports-cli)
+![CI workflow](https://github.com/smeghead/thinreports-cli/actions/workflows/ruby.yml/badge.svg)
 
 **Unofficial** and **Experimental** Thinreports command-line tool.
 
